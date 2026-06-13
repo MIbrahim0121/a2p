@@ -120,7 +120,13 @@ let useMock = true;
 
 if (process.env.DATABASE_URL) {
   try {
-    prisma = new PrismaClient();
+    if (process.env.DATABASE_URL.startsWith('prisma+postgres://') || process.env.DATABASE_URL.startsWith('prisma://')) {
+      prisma = new PrismaClient({
+        accelerateUrl: process.env.DATABASE_URL,
+      });
+    } else {
+      prisma = new PrismaClient();
+    }
     useMock = false;
   } catch (e) {
     console.error("PrismaClient initialization failed, falling back to Local JSON DB", e);
