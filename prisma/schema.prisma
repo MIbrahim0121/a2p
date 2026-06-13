@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id              String           @id @default(uuid())
+  email           String           @unique
+  password        String
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  businessProfile BusinessProfile?
+}
+
+model BusinessProfile {
+  id                  String   @id @default(uuid())
+  userId              String   @unique
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  legalBusinessName   String
+  businessType        String   // LLC, Corporation, Sole Proprietorship, Partnership
+  einNumber           String
+  streetAddress       String
+  city                String
+  state               String
+  zipCode             String
+  country             String
+  repName             String
+  repTitle            String
+  repEmail            String
+  industryVertical    String   // Real Estate, Home Services, Coaching, etc.
+  messagingGoal       String   // Transactional, Marketing
+  subdomain           String   @unique
+  websiteUrl          String?
+  complianceScore     Int      @default(0)
+  ghlConnected        Boolean  @default(false)
+  vercelDeployed      Boolean  @default(false)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model GhlConnection {
+  id           String   @id @default(uuid())
+  locationId   String   @unique
+  accessToken  String
+  refreshToken String
+  scopes       String
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

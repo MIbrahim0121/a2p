@@ -1,0 +1,38 @@
+{
+  "users": {
+    "mock-user-uuid": {
+      "id": "mock-user-uuid",
+      "email": "user@a2pwizard.com",
+      "password": "hashedpassword_mock",
+      "createdAt": "2026-06-12T14:38:56.529Z",
+      "updatedAt": "2026-06-12T14:38:56.529Z"
+    }
+  },
+  "profiles": {
+    "mock-user-uuid": {
+      "id": "mock-profile-uuid",
+      "userId": "mock-user-uuid",
+      "legalBusinessName": "Third Power Enterprises, LLC",
+      "businessType": "LLC",
+      "einNumber": "84-1997112",
+      "streetAddress": "2 Greenbriar Rd",
+      "city": "South Harrison",
+      "state": "NJ",
+      "zipCode": "08062",
+      "country": "US",
+      "repName": "Emory Brown",
+      "repTitle": "CEO",
+      "repEmail": "welcome@thirdpowerenterprisesllc.nebulabrandgroup.com",
+      "industryVertical": "Other",
+      "messagingGoal": "Transactional",
+      "subdomain": "third",
+      "ghlConnected": true,
+      "websiteUrl": "https://popai.a2pwizard.com",
+      "complianceScore": 100,
+      "updatedAt": "2026-06-12T17:15:39.360Z",
+      "createdAt": "2026-06-12T14:45:05.540Z",
+      "vercelDeployed": true
+    }
+  },
+  "ghlConnections": {}
+}
