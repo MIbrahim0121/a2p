@@ -25,11 +25,11 @@
       "repEmail": "welcome@thirdpowerenterprisesllc.nebulabrandgroup.com",
       "industryVertical": "Other",
       "messagingGoal": "Transactional",
-      "subdomain": "third",
+      "subdomain": "thirdPower",
       "ghlConnected": true,
-      "websiteUrl": "https://popai.a2pwizard.com",
+      "websiteUrl": "https://a2p-wizard-thirdpower-hbsirxtrn.vercel.app",
       "complianceScore": 100,
-      "updatedAt": "2026-06-12T17:15:39.360Z",
+      "updatedAt": "2026-06-24T16:18:13.720Z",
       "createdAt": "2026-06-12T14:45:05.540Z",
       "vercelDeployed": true
     }
